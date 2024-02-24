@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonLight</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        #content {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #click__to__play {
+            cursor: pointer;
+            color: white;
+            font-family: sans-serif;
+            font-size: 24px;
+            background-color: #161616;
+            padding: 15px 20px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            border-radius: 8px;
+        }
+
+        #click__to__play:hover {
+            background-color: #232222;
+        }
+
+        #menu {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(18, 18, 18, 0.981);
+            padding: 10px;
+            width: 20%;
+            height: 300px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 3;
+        }
+
+        #avatar {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        #nickname {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #custom-text {
+            font-size: 16px;
+            color: #cccccc;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #harmony__button{
+            cursor: pointer;
+            background: none;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+        #button2{
+            cursor: pointer;
+            background: none;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+        }
+        #button3{
+            cursor: pointer;
+            background: none;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            position: absolute;
+            top: 80%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+        #button4 {
+            cursor: pointer;
+            background: none;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            position: absolute;
+            top: 80%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding: 3px;
+            transition: transform 0.5s;
+        }
+
+        #harmony__button:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        #button2:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        #button3:hover{
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        #button4:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        function playMusic() {
+            var video = document.getElementById('background');
+            var music = document.getElementById('music__fun');
+
+            video.play();
+            music.play();
+        }
+
+        function handleHarmonyClick() {
+            window.location.href = 'https://youtu.be/DK_ACNeSRt8?si=2tnVxRnsbKrdSIH_';
+        }
+
+        function handleClick() {
+            playMusic();
+            $('#click__to__play').css('opacity', 0);
+            $('#menu').fadeIn();
+            $('#background').fadeIn();
+        }
+
+        function handleButtonClick(buttonNumber) {
+            switch (buttonNumber) {
+                case 2:
+                    window.location.href = 'https://youtu.be/DK_ACNeSRt8?si=2tnVxRnsbKrdSIH_';
+                    break;
+                case 3:
+                    window.location.href = 'https://youtu.be/DK_ACNeSRt8?si=2tnVxRnsbKrdSIH_';
+                    break;
+                case 4:
+                    window.location.href = 'https://youtu.be/DK_ACNeSRt8?si=2tnVxRnsbKrdSIH_';
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <video id="background" autoplay muted loop>
+        <source src="static/видео.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="content">
+        <button id="click__to__play" onclick="handleClick()">🖤🖤🖤🖤🖤🖤</button>
+    </div>
+
+    <div id="menu">
+        <img id="avatar" src="https://cdn.discordapp.com/avatars/532120976440164352/36f03333acbe2838cb1de5911a4eeb72.png" alt="Avatar">
+        <p id="nickname">BlueMouse</p>
+        <p id="custom-text">Твой папочка</p>
+
+        <button id="harmony__button" onclick="handleHarmonyClick()">
+            <img class="icon" src="https://i.pinimg.com/564x/d1/31/f9/d131f93b9d86390d086bbe7c65cf3d07.jpg" alt="Discord Icon">
+        </button>
+
+        <button id="button2" onclick="handleButtonClick(2)">
+            <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAdUlEQVR4AWJwagW0XwcpAIMwFERzGYmXz9lE23063kAKNkUivL+ehZvcU4GhwzfrMBSIMIoG/1iDCmPwICZMhwe5hPFISwEv38EBGRD3CTMgA9bfAQEZEPAJMyADMiADYoQfJr84zWrgcVqFmRSGAd9swKCQBzjGqPaG+ardAAAAAElFTkSuQmCC"" alt="Icon 2">
+        </button>
+
+        <button id="button3" onclick="handleButtonClick(3)">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="Icon 3">
+        </button>
+
+        <button id="button4" onclick="handleButtonClick(4)">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="Icon 4">
+        </button>
+    </div>
+
+    <audio id="music__fun" loop>
+        <source src='static/муз.mp3' type='audio/mp3'>
+    </audio>
+</body>
+
+</html>
